@@ -1,9 +1,11 @@
-package com.fyrl29074.cat_gram
+package com.fyrl29074.cat_gram.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.fyrl29074.cat_gram.ui.main.MainFragment
+import com.fyrl29074.cat_gram.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
