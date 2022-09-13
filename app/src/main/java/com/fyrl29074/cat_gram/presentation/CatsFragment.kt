@@ -1,6 +1,7 @@
 package com.fyrl29074.cat_gram.presentation
 
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +18,17 @@ class CatsFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: CatsViewModel by viewModels()
+
+//    private val screenPixelDensity: Float? = context?.resources?.displayMetrics?.density
+//
+//    private val screenWidthInPixels = resources.displayMetrics.widthPixels
+//    private val screenHeightInPixels = resources.displayMetrics.heightPixels
+
+//    private val catAdapter = CatAdapter(
+//        screenPixelDensity,
+//        screenWidthInPixels.toFloat(),
+//        screenHeightInPixels.toFloat()
+//    )
 
     private val catAdapter = CatAdapter()
 

@@ -12,7 +12,6 @@ class CatPagingSource : PagingSource<Int, CatModel>() {
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, CatModel> {
         val page = params.key ?: FIRST_PAGE
         return kotlin.runCatching {
-
             repository.getCatImageList(page)
         }.fold(
             onSuccess = {
