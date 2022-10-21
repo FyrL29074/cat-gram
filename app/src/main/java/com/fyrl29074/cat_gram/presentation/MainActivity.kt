@@ -1,7 +1,6 @@
 package com.fyrl29074.cat_gram.presentation
 
 import android.os.Bundle
-import android.util.DisplayMetrics
 import androidx.appcompat.app.AppCompatActivity
 import com.fyrl29074.cat_gram.R
 

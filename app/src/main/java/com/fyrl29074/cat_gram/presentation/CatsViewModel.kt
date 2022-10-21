@@ -11,6 +11,7 @@ import com.fyrl29074.cat_gram.data.CatModel
 import kotlinx.coroutines.flow.Flow
 
 class CatsViewModel : ViewModel() {
+
     val cats: Flow<PagingData<CatModel>> = Pager(
         config = PagingConfig(pageSize = 10),
         pagingSourceFactory = { CatPagingSource() }

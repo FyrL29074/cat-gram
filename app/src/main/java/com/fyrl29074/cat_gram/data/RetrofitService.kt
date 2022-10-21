@@ -5,6 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
+
 const val BASE_URL = "https://api.thecatapi.com/"
 
 object RetrofitService {
