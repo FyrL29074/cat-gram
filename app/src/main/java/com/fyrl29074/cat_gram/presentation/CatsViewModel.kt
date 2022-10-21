@@ -6,7 +6,6 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.fyrl29074.cat_gram.data.CatImageRepository
 import com.fyrl29074.cat_gram.data.CatModel
 import kotlinx.coroutines.flow.Flow
 

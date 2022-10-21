@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.doOnLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.fyrl29074.cat_gram.databinding.FragmentCatsBinding
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+
 
 class CatsFragment : Fragment() {
 
@@ -32,14 +34,19 @@ class CatsFragment : Fragment() {
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.recyclerView.adapter = catAdapter
+        binding.recyclerView.doOnLayout {
 
-        viewModel.cats.onEach {
-            catAdapter.submitData(it)
-        }.launchIn(viewLifecycleOwner.lifecycleScope)
+            binding.recyclerView.adapter = catAdapter
+
+            viewModel.cats.onEach {
+                catAdapter.submitData(it)
+            }.launchIn(viewLifecycleOwner.lifecycleScope)
+        }
+
     }
 
     override fun onDestroy() {
